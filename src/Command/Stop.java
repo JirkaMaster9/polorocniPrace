@@ -2,7 +2,7 @@ package Command;
 
 public class Stop implements Command{
     @Override
-    public String execute() {
+    public String execute(String s) {
         return "";
     }
 
