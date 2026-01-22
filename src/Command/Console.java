@@ -1,20 +1,28 @@
 package Command;
 
+import GameLogic.Character;
+
 import java.util.HashMap;
 import java.util.Scanner;
 
 public class Console {
     private HashMap<String, Command> commands;
     private Scanner scanner;
+    private Character character;
 
-    public Console(){
 
+
+    public Console(Character character){
         scanner = new Scanner(System.in);
         commands = new HashMap<>();
+        this.character = character;
     }
+
     public void inicializator(){
         commands.put("help",new Help());
-        commands.put("move",new Move());
+        commands.put("move",new Move(character));
+
+
 
     }
     public void execute() {
@@ -24,7 +32,11 @@ public class Console {
 
         String[] cm = command.trim().toLowerCase().split(" ");
         if(commands.containsKey(cm[0])) {
+
             Command com = commands.get(cm[0]);
+            if (commands.get(command) instanceof Move move){
+                move.setCharacter(character);
+            }
             if (cm.length>2){
                 System.out.println("too many parameters");
                 return;

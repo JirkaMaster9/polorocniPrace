@@ -15,4 +15,5 @@ public class Help implements Command{
     public String helpText() {
         return "returns this text";
     }
+
 }
