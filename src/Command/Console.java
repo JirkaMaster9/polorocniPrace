@@ -14,6 +14,7 @@ public class Console {
     }
     public void inicializator(){
         commands.put("help",new Help());
+        commands.put("move",new Move());
 
     }
     public void execute() {

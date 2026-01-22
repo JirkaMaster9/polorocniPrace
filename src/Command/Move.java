@@ -1,10 +1,10 @@
 package Command;
 
-public class Help implements Command{
+public class Move implements Command{
     @Override
     public String execute(String s) {
-        return "helping with : "+s;
-    }//TODO create help
+        return "";
+    }
 
     @Override
     public boolean exit() {
@@ -13,6 +13,6 @@ public class Help implements Command{
 
     @Override
     public String helpText() {
-        return "returns this text";
+        return "";
     }
 }
