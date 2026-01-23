@@ -17,13 +17,15 @@ public class GameLoop {
         character.setCurrentLocation(turboloadedMap.getMaps().getFirst().getInteractSpotMap().get(cor));
         character.setMap(turboloadedMap.getMaps().getFirst());
         character.setCoordinates(cor);
+
 //        character.setMap();
 //        character.setCurrentLocation();
 //        character.setCoordinates();
 
 
-        Console console = new Console(character);
+        Console console = new Console(character,this);
         console.inicializator();
+
 
         do {
             console.execute();
@@ -31,4 +33,7 @@ public class GameLoop {
         } while (!isExit);
     }
 
+    public void setExit(boolean exit) {
+        isExit = exit;
+    }
 }
