@@ -25,6 +25,11 @@ public class Console {
         commands.put("help",new Help(commands));
         commands.put("move",new Move(character));
         commands.put("stop",new Stop());
+        commands.put("interact",new Interact(character));
+        commands.put("map",new Map(character));
+        commands.put("inv",new Inventory (character));
+        commands.put("rune",new RuneInventory (character));
+        commands.put("use",new UseItem(character));
 
 
 
