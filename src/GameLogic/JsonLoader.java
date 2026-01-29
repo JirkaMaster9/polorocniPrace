@@ -11,7 +11,6 @@ import java.io.Reader;
 public class JsonLoader {
     public static TurboMap loadMap(String s) {
         try (Reader reader = new FileReader(s)) {
-            // Use GsonBuilder to enable support for Map keys that are Objects
             Gson gson = new GsonBuilder()
                     .enableComplexMapKeySerialization()
                     .create();
