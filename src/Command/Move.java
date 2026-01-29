@@ -5,11 +5,9 @@ import GameLogic.Character;
 import Map.Coordinates;
 
 public class Move implements Command{
-    Character character;
+    private Character character;
 
-    public void setCharacter(Character character) {
-        this.character = character;
-    }
+
 
     @Override
     public String execute(String s) {
@@ -52,7 +50,7 @@ public class Move implements Command{
 
     @Override
     public String helpText() {
-        return "";
+        return "moves player, move usage: move <parameter> (up,down,left,right) ";
     }
 
     public Move(Character character) {

@@ -3,16 +3,16 @@ package Command;
 public class Stop implements Command{
     @Override
     public String execute(String s) {
-        return "";
+        return "stopping the game";
     }
 
     @Override
     public boolean exit() {
-        return false;
+        return true;
     }
 
     @Override
     public String helpText() {
-        return "stops the game";
+        return "command stop stops the game, the second parameter is ignored, usage: stop";
     }
 }
