@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class Character {
     private String name;
-    private int health,maxHealth,mana,maxMana;
+    private float health,maxHealth,mana,maxMana;
     private ArrayList <Item> itemList;
     private ArrayList <Rune> runeList;
     private InteractSpot currentLocation;
@@ -41,7 +41,7 @@ public class Character {
 
     private Coordinates coordinates;
 
-    public int getMaxHealth() {
+    public float getMaxHealth() {
         return maxHealth;
     }
 
@@ -49,15 +49,15 @@ public class Character {
         this.maxHealth = maxHealth;
     }
 
-    public int getMana() {
+    public float getMana() {
         return mana;
     }
 
-    public void setMana(int mana) {
+    public void setMana(float mana) {
         this.mana = mana;
     }
 
-    public int getMaxMana() {
+    public float getMaxMana() {
         return maxMana;
     }
 
@@ -65,11 +65,11 @@ public class Character {
         this.maxMana = maxMana;
     }
 
-    public int getHealth() {
+    public float getHealth() {
         return health;
     }
 
-    public void setHealth(int health) {
+    public void setHealth(float health) {
         this.health = health;
     }
 

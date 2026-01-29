@@ -30,6 +30,7 @@ public class Console {
         commands.put("inv",new Inventory (character));
         commands.put("rune",new RuneInventory (character));
         commands.put("use",new UseItem(character));
+        commands.put("spell",new Spell(character));
 
 
 
